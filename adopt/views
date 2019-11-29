@@ -1,0 +1,8 @@
+
+m django.http im[port HttpResponse
+
+import random
+
+def index(request):
+    i = random.random()
+    return 
