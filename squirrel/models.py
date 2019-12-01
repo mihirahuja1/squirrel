@@ -1,78 +1,30 @@
 from django.db import models
 
 
-from django.db import models
-from django.utils.translation import gettext as _
 
 class Squirrel(models.Model):
-    X = models.FloatField(
-            help_text=_('Latitude'),
-            )
-    
-    Y = models.FloatField(
-            help_text=_('Longitude'),
-            )
-    Unique_Squirrel_ID = models.CharField(
-            help_text=_('Unique Squirrel id'),
-            max_length=50,
-            )
-    Shift = models.CharField(
-            help_text=_('Shift'),
-            max_length=100,
-            )
-
-    Date = models.DateField(
-            help_text=_('Date'),
-            )
-
-    Hectare_Squirrel_Number = models.IntegerField(
-            help_text=_('Hectare Squirrel Number'),
-            )
-
-    Age = models.CharField(
-            help_text=_('Age category'),
-            max_length=100,
-            )
-    Highlight_Fur_Color = models.CharField(
-         max_length=200,
-            )
-    Combination_of_Primary_and_Highlight_Color= models.CharField(
-            max_length=200,
-            )
-    Color_notes = models.CharField(
-            max_length=200,
-            )
-    Location = models.CharField(
-            max_length=200,
-            )
-    Above_Ground_Sighter_Measurement = models.CharField(
-            max_length=200,
-            )
-    Specific_Location = models.CharField(
-            max_length=200,
-            )
-    Running = models.BooleanField()
-    Chasing = models.BooleanField()
-    Climbing = models.BooleanField()
-    Eating = models.BooleanField()
-    Foraging = models.BooleanField()
-    Other = models.CharField( 
-            max_length=200,
-            )
-    Kuks = models.BooleanField()
-    Quaas = models.BooleanField()
-    Moans = models.BooleanField()
-    Tail_flags = models.BooleanField()
-    Tail_twitches = models.BooleanField()
-    Approaches = models.BooleanField()
-    Indifferent = models.BooleanField()
-    Runs_from = models.BooleanField()
-    Other_Interactions = models.CharField(
-            max_length=200,
-            )
-    LatLong = models.CharField(
-            max_length=200,
-            )
-
+    latitude = models.FloatField(null=True)
+    longitude = models.FloatField(null=True)
+    unique_squirrel_id = models.CharField(max_length=100)
+    shift = models.CharField(max_length=20)
+    date = models.DateField(null=True)
+    age = models.CharField(max_length=20)
+    primary_fur_color = models.CharField(max_length=200)
+    location  = models.CharField(max_length=200)
+    specific_location  = models.CharField(max_length=200)
+    running = models.BooleanField(null=True)
+    chasing = models.BooleanField(null=True)
+    climbing = models.BooleanField(null=True)
+    eating = models.BooleanField(null=True)
+    foraging = models.BooleanField(null=True)
+    other_activities = models.CharField(max_length=200)
+    kuks = models.BooleanField(null=True)
+    quaas = models.BooleanField(null=True)
+    moans = models.BooleanField(null=True)
+    tail_flags = models.BooleanField(null=True)
+    tail_twitches = models.BooleanField(null=True)
+    approaches = models.BooleanField(null=True)
+    indifferent = models.BooleanField(null=True)
+    runs_from = models.BooleanField(null=True)
 
 # Create your models here.
