@@ -28,4 +28,5 @@ class Sightings(models.Model):
     runs_from = models.BooleanField(null=True)
 
 
-# Create your models here.
+def __str__(self):
+    return self.unique_squirrel_id

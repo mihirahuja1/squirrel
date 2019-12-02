@@ -9,4 +9,11 @@ def sightings(request):
             'all_sightings': all_sightings,
     }
     return render(request,'squirrel/sightings.html',context)
+
+def sightings_details(request, unique_squirrel_id):
+    squirrel = Sightings.objects.get(id=unique_squirrel_id)
+    return HttpResponse(squirrel.unique_squirrel_id)
+
+
+
 # Create your views here.
