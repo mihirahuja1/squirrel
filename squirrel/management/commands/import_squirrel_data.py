@@ -1,6 +1,6 @@
-rom django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand
 import pandas as pd
-from tracker.models import Squirrel
+from squirrel.models import Sightings
 
 class Command(BaseCommand):
     help = 'imports squirrel data from path'
@@ -10,7 +10,7 @@ class Command(BaseCommand):
         path = kwargs['path']
         df = pd.read_csv(path)
         for index, row in df.iterrows():
-            squirrel = Squirrel()
+            squirrel = Sightings()
             squirrel.latitude = row['X']
             squirrel.longitude = row['Y']
             squirrel.unique_squirrel_id = row['Unique Squirrel ID']
@@ -35,7 +35,7 @@ class Command(BaseCommand):
             squirrel.approaches = row['Approaches']
             squirrel.indifferent = row['Indifferent']
             squirrel.runs_from = row['Runs from']
-            squirrel.save()i
+            squirrel.save()
 
 
 
