@@ -5,11 +5,15 @@ import csv
 import sys
 
 class Command(BaseCommand):
-    help = ("Output the specified model as CSV")
-    args = '[appname.ModelName]'
+    help = ("Output the sightings data as CSV")
 
+    def add_arguments(self, parser):
+        parser.add_argument('path', type=str)
+   
     def handle(self, *args, **kwargs):
-        from django.db.models import get_model
+        path = kwargs['path']
+        df = pd.read_csv(path)
+
         squirrel, Sightings = args[0].split('.')
         model = get_model(squirrel, Sightings)
         field_names = [f.name for f in model._meta.fields]
