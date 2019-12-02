@@ -1,0 +1,27 @@
+from django import forms
+
+class Add(forms.Form):
+    latitude = forms.FloatField(null=True)
+    longitude = forms.FloatField(null=True)
+    unique_squirrel_id = forms.CharField(max_length=100)
+    shift = forms.CharField(max_length=20)
+    date = forms.DateField(null=True)
+    age = forms.CharField(max_length=20)
+    primary_fur_color = forms.CharField(max_length=200)
+    location  = forms.CharField(max_length=200)
+    specific_location  = forms.CharField(max_length=200)
+    running = forms.BooleanField(null=True)
+    chasing = forms.BooleanField(null=True)
+    climbing = forms.BooleanField(null=True)
+    eating = forms.BooleanField(null=True)
+    foraging = forms.BooleanField(null=True)
+    other_activities = forms.CharField(max_length=200)
+    kuks = forms.BooleanField(null=True)
+    quaas = forms.BooleanField(null=True)
+    moans = forms.BooleanField(null=True)
+    tail_flags = forms.BooleanField(null=True)
+    tail_twitches = forms.BooleanField(null=True)
+    approaches = forms.BooleanField(null=True)
+    indifferent = forms.BooleanField(null=True)
+    runs_from = forms.BooleanField(null=True)
+
