@@ -13,6 +13,8 @@ def sightings(request):
 def sightings_details(request, unique_squirrel_id):
     squirrel = Sightings.objects.get(id=unique_squirrel_id)
     return HttpResponse(squirrel.unique_squirrel_id)
+def sightings_add():
+    :
 
 
 
