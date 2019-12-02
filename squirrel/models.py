@@ -27,4 +27,5 @@ class Sightings(models.Model):
     indifferent = models.BooleanField(null=True)
     runs_from = models.BooleanField(null=True)
 
+
 # Create your models here.
