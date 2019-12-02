@@ -3,9 +3,11 @@ import pandas as pd
 from squirrel.models import Sightings
 
 class Command(BaseCommand):
-    help = 'imports squirrel data from path'
+    help = 'imports squirrel data'
+
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
+
     def handle(self, *args, **kwargs):
         path = kwargs['path']
         df = pd.read_csv(path)
