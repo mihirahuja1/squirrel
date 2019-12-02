@@ -1,9 +1,10 @@
 <hmtl>
 	<body>
-		<form action='/add-squirrel/' method = "post"
+		<form  method = "post novalidate">
 			{%csrf_token%}
 			{{form}}
 			<input type="submit" value="Submit">
+			<button type="submit">Submit</button>
 		</form>
 
 	</body>
