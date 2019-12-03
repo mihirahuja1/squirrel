@@ -20,7 +20,7 @@ def sightings_add(request):
         
     else:
         form = Add()
-    return render(request,'squirrel/all.html',{'form':form})
+    return render(request,'squirrel/add.html',{'form':form})
 
 
 
