@@ -27,7 +27,8 @@ def sightings_stats(request):
     #        'all_sightings': all_sightings,
     #}
     return render(request,'sightings/stats.html',context)
-
+def map(request):
+    return render(request,'map.html',context)
     
 
 
