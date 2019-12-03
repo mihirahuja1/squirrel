@@ -9,7 +9,7 @@ def sightings(request):
     context = {
             'all_sightings': all_sightings,
     }
-    return render(request,'squirrel/sightings.html',context)
+    return render(request,'sightings.html',context)
 
 def sightings_details(request, unique_squirrel_id):
     squirrel = Sightings.objects.get(id=unique_squirrel_id)
@@ -20,7 +20,15 @@ def sightings_add(request):
         
     else:
         form = Add()
-    return render(request,'squirrel/add.html',{'form':form})
+    return render(request,'sightings/add.html',{'form':form})
+def sightings_stats(request):
+    all_sightings = Sightings.objects.all()
+    #context = {
+    #        'all_sightings': all_sightings,
+    #}
+    return render(request,'sightings/stats.html',context)
+
+    
 
 
 
