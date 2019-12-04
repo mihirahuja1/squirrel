@@ -8,6 +8,8 @@ table, th, td {
 </head>
 <body>
 <h2>Squirrel Sightings Table</h2>
+<a href="/sightings/add/">Add Sighting</a>
+<a href="/sightimgs/stats/">Sightings Stats</a>
 	<table style="width:100%">
 	    <tr>
 		    <th>Latitude</th>
@@ -38,7 +40,9 @@ table, th, td {
 	    <tr>	
 		    <td>{{sighting.latitude}}</td>
         	<td>{{sighting.longitude}}</td>
-		    <td>{{sighting.unique_squirrel_id}}</td>
+        	<td>
+                <a href="/sightings/{{sighting.unique_squirrel_id}}>/">{{sighting.unique_squirrel_id}}</a>
+            </td>
 		    <td>{{sighting.shift}}</td>
 		    <td>{{sighting.date}}</td>
 		    <td>{{sighting.age}}</td>
