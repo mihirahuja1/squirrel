@@ -1,8 +1,16 @@
 <hmtl>
 	<body>
 		<form  method = "Post">
+			<p> Add Squirrel Sightings!</p>
 			{%csrf_token%}
-			{{form}}
+
+			{% for field in form  %}
+      	<div class="col-sm-6">
+        	<b>{{ field.label_tag }}</b> {{ field }} 
+      	</div>
+    		{% endfor %}
+
+
 			<input type="submit" value="Add Sighting"/>
 			
 		</form>

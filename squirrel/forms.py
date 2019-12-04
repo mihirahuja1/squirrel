@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.safestring import mark_safe
 
 class Add(forms.Form):
     TRUE_FALSE_CHOICES = (
