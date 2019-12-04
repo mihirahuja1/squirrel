@@ -16,7 +16,7 @@ def sightings_details(request, unique_squirrel_id):
     return HttpResponse(squirrel.unique_squirrel_id)
 def sightings_add(request):
     if request.method == 'POST':
-        #form = Add(request.POST)
+        form = Add(request.POST)
         new_data = Sightings()
         #new_data.title = request.POST.get('title')
 
@@ -43,6 +43,7 @@ def sightings_add(request):
         new_data.approaches = request.POST.get('approaches')
         new_data.indifferent = request.POST.get('indifferent')
         new_data.runs_from = request.POST.get('runs_from')
+        new_data.save()
 
 
 
