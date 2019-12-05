@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path('sightings/', views.sightings),
-    path('sightings/<int:unique_squirrel_id>/', views.sightings_details, name='edit'),
     path('sightings/add/',views.sightings_add, name='add'),
+    path('sightings/<unique_squirrel_id>/', views.sightings_edit, name='edit'),
     path('map/',views.map),
  ]

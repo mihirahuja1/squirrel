@@ -8,13 +8,13 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
 
-    def handle(self, *args, **kwargs):
-        path = kwargs['path']
+    def handle(self, *args, **options):
+        path = options['path']
         df = pd.read_csv(path)
         for index, row in df.iterrows():
             squirrel = Sightings()
-            squirrel.latitude = row['X']
-            squirrel.longitude = row['Y']
+            squirrel.latitude = row['Y']
+            squirrel.longitude = row['X']
             squirrel.unique_squirrel_id = row['Unique Squirrel ID']
             squirrel.shift = row['Shift']
             date = str(row['Date'])

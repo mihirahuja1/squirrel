@@ -1,4 +1,5 @@
-<ul>
+<!DOCTYPE html>
+<html>
 <head>
 <style>
 table, th, td {
@@ -17,26 +18,26 @@ table, th, td {
 		    <th>Longitude</th>
 		    <th>Unique_squirrel_id</th>
 		    <th>Shift</th>
-                    <th>Date</th>
-                    <th>Age</th>
+            <th>Date</th>
+            <th>Age</th>
 		    <th>Primary_Fur_Color</th>
-                    <th>Location</th>
-                    <th>Specific_Location</th>
+            <th>Location</th>
+            <th>Specific_Location</th>
 		    <th>Running</th>
-                    <th>Chasing</th>
-                    <th>Climbing</th>
+            <th>Chasing</th>
+            <th>Climbing</th>
 		    <th>Eating</th>
-                    <th>Foraging</th>
-                    <th>Other Activities</th>
+            <th>Foraging</th>
+            <th>Other Activities</th>
 		    <th>Kuks</th>
-                    <th>Quaas</th>
-                    <th>Moans</th>
+            <th>Quaas</th>
+            <th>Moans</th>
 		    <th>Tail_flags</th>
-                    <th>Tail_twitches</th>
-                    <th>Approaches</th>
+            <th>Tail_twitches</th>
+            <th>Approaches</th>
 		    <th>Indifferent</th>
-                    <th>Runs_from</th>
-            </tr>	
+            <th>Runs_from</th>
+        </tr>	
 	    {% for sighting in all_sightings %}
 	    <tr>	
 		    <td>{{sighting.latitude}}</td>
@@ -68,4 +69,4 @@ table, th, td {
 		 {% endfor %}
 	</table>
 </body>
-</ul>
+</html>>
