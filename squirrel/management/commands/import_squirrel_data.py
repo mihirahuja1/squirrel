@@ -39,15 +39,6 @@ class Command(BaseCommand):
             squirrel.runs_from = row['Runs from']
             squirrel.save()
 
-    # def handle(self, *args, **options):
-    #     with open(options['csv_file']) as fp:
-    #         reader = csv.DictReader(fp)
-    #         data = list(reader)
 
-    #         for item in data:
-    #             s - Sightings(
-    #                 field=item['field_name'],
-    #                 )
-    #             s.save()
 
 
