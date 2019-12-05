@@ -60,7 +60,14 @@ def sightings_stats(request):
     #}
     return render(request,'sightings/stats.html',context)
 def map(request):
-    return render(request,'map.html',context)
+    # need to choose 100 unique id squirrels
+    all_sightings  = Sightings.objects.all()[:100]
+    context = {
+            'all_sightings': all_sightings,
+    }
+
+    return render(request,'sightings/map.html',context)
+
     
 
 
