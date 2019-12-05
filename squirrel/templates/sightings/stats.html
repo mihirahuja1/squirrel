@@ -1,3 +1,98 @@
-<HTML>
-	<p> Stats Page</p>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Squirrel Sightings Stats</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+th {
+  text-align: center;
+  background-color: #eee;
+  color: Darkblue;
+}
+td {text-align: center;
+  background-color: #fff;
+  color: Darkgreen;
+}
+</style>
+</head>
+<body>
+	<table style="width:30%";>
+	<caption>Summary of Age Statistics</caption>
+ 		<tr>
+    		<th>Age</th>
+    		<th>Count</th>
+  		</tr>
+  		{% for item in squirrel_age %}
+  		<tr>
+    		{% for val in item.values %}
+    		<td>{{ val }}</td>
+			{% endfor %}
+  		</tr>
+  		{% endfor %}
+	</table>
+	<br>
+
+	<table style="width:30%">
+   	<caption>Summary of Primary Fur Color</caption>
+ 		 <tr>
+   			<th>Primary Fur Color</th>
+    		<th>Count</th>
+  		</tr>
+  		{% for item in squirrel_primary_fur_color %}
+  		<tr>
+    		{% for val in item.values %}
+    		<td>{{ val }}</td>
+    		{% endfor %}
+  		</tr>
+  		{% endfor %}
+	</table>
+	<br>
+<p>Activities Summary Table</p>
+<div>
+	<table style="float: left">
+  		<tr>
+    		<th>Running</th>
+    		<th>Count</th>
+  		</tr>
+  		{% for item in squirrel_running %}
+  		<tr>
+    		{% for val in item.values %}
+    		<td>{{ val }}</td>
+    		{% endfor %}
+  		</tr>
+  		{% endfor %}
+  	</table>
+  	</table>
+  	<table style="float: left">
+  		<tr>
+   			 <th>climbing</th>
+   			 <th>Count</th>
+  		</tr>
+  		{% for item in squirrel_climbing %}
+  		<tr>
+    		{% for val in item.values %}
+    		<td>{{ val }}</td>
+    		{% endfor %}
+  		</tr>
+  		{% endfor %}
+  	</table>
+  	</table>
+	<table style="float: left">
+  		<tr>
+    		<th>Chasing</th>
+    		<th>Count</th>
+  		</tr>
+  		{% for item in squirrel_chasing %}
+  			<tr>
+    		{% for val in item.values %}
+    		<td>{{ val }}</td>
+    		{% endfor %}
+  		</tr>
+  		{% endfor %}
+	</table>
+    </table>
+</div>
+</body>
+</html>
