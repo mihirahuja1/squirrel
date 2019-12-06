@@ -1,2 +1,4 @@
 *.pyc
-.views.py.swp
+__pycache__
+collected-static
+*.sqlite3
