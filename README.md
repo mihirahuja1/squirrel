@@ -16,3 +16,6 @@ Members:
 
 Link to the application:
 https://toolsprj-254020.appspot.com/
+--An update, We ran out of Google Virtual Machine credits, so the website is no longer hosted.
+--But the app can be setup locally and run!
+--Feel free to reach out if you need help setting up the app.
