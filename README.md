@@ -1,7 +1,7 @@
 # squirrel
 Welcome to the Squirrel App 🐿! 
 
-We have implemented a squirrel tracker app for Central Park in New York City with the following features:
+We have implemented a squirrel tracker app on Django for Central Park in New York City with the following features:
 1) A map that displays 100 squirrels.(/map)
 2) A sightings summary page with links to edit each sighting or add a new sighting.(/sightings)
 3) A page to add new sightings.(sightings/add)
